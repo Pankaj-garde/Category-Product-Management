@@ -28,6 +28,7 @@ public class ProductDataController {
     // 1. Get all products with pagination
 	@GetMapping
     public Page<Product> getAllProducts(@RequestParam(defaultValue = "0") int page,@RequestParam(defaultValue = "10") int size) {
+		System.out.println("call method");
         return productServices.getAllData(page, size);
     }
     // 2. Create a new product

@@ -33,8 +33,9 @@ public class CategoryServices {
 
 // get all Category 
 	public Page<Category> getAllCategory(int page, int size) {
-        Pageable pageable = PageRequest.of(page, size);
-        return categoryRepo.findAll(pageable);
+		System.out.println("getAllCategory method ");
+		 Pageable pageable = PageRequest.of(page, size);
+	     return categoryRepo.findAll(pageable);
     }
 
 	// get by id
